@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Acceso - TecMina Conecta</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f2f2f2; padding: 50px; text-align: center; }
+        .form-container { background: #fff; padding: 20px; border-radius: 10px; width: 300px; margin: auto; box-shadow: 0 0 10px rgba(0,0,0,0.2); }
+        input { width: 90%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc; }
+        button { padding: 10px; background-color: #0044cc; color: white; border: none; border-radius: 5px; cursor: pointer; width: 100%; }
+        a { display: block; margin-top: 15px; color: #0044cc; text-decoration: none; }
+    </style>
+</head>
+<body>
+<div class="form-container">
+    <h2>Iniciar Sesión</h2>
+    <form method="POST" action="login.php">
+        <input type="email" name="correo" placeholder="Correo" required>
+        <input type="password" name="password" placeholder="Contraseña" required>
+        <button type="submit">Ingresar</button>
+    </form>
+    <a href="registro.html">¿No tienes cuenta? Regístrate</a>
+</div>
+</body>
+</html>

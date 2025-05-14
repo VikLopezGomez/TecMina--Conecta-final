@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Foro de Denuncias Anónimas</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; padding: 20px; }
+        .foro-container { background: #fff; padding: 20px; border-radius: 8px; max-width: 800px; margin: auto; }
+        h2 { color: #333; }
+        form { margin-bottom: 20px; }
+        textarea { width: 100%; height: 100px; padding: 10px; }
+        .comentario { background: #eaeaea; margin: 10px 0; padding: 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <div class="foro-container">
+        <h2>Foro de Denuncias Anónimas</h2>
+        <form id="formComentario">
+            <textarea id="comentario" placeholder="Escribe tu denuncia sobre instalaciones, materias o métodos de estudio..." required></textarea><br>
+            <button type="submit">Publicar</button>
+        </form>
+        <div id="comentarios">
+            <!-- Comentarios aparecerán aquí -->
+        </div>
+    </div>
+    <script>
+        document.getElementById('formComentario').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const texto = document.getElementById('comentario').value;
+            if (texto.trim()) {
+                const div = document.createElement('div');
+                div.className = 'comentario';
+                div.textContent = texto;
+                document.getElementById('comentarios').prepend(div);
+                document.getElementById('comentario').value = '';
+            }
+        });
+    </script>
+</body>
+</html>
